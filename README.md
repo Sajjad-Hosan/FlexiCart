@@ -150,7 +150,7 @@ For queries or support, reach out to:
 
 Email: devsajjadhosan@gmail
 
-GitHub: 
+GitHub: https://github.com/Sajjad-Hosan
 
 
 Let me know if you’d like to make any changes or additions!
