@@ -53,14 +53,13 @@ SOCKET_PORT=<port-number>
 
 Frontend:
 ```bash
-npm start
+npm run dev
 ```
 
 Backend:
 ```bash
-npm run dev
+node index.js
 ```
-
 
 
 ## Usage
