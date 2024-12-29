@@ -8,11 +8,11 @@ const TrendingProducts = () => {
   return (
     <div className="p-4">
       <div className="flex justify-between items-center">
-        <div className="flex flex-col mb-5">
+        <div className="flex flex-col mb-8">
           <h2 className="font-semibold text-left mb-1">
-            &#10040; Shop Products
+            &#10040; Trending Products
           </h2>
-          <h1 className="text-2xl font-semibold">Our All Products</h1>
+          <h1 className="text-4xl font-semibold">What's Trending Now</h1>
         </div>
       
       </div>
@@ -22,7 +22,7 @@ const TrendingProducts = () => {
             <img
               src="https://html.pixelfit.agency/pesco/assets/images/products/feature-product-2.png"
               alt=""
-              className="p-2 rounded-box absolute -top-36 left-28 lg:left-14 h-[22rem] transition-all transform hover:translate-y-5 duration-200 cursor-pointer"
+              className="p-2 rounded-box absolute -top-36 left-28 lg:left-14 h-[22rem] transition-all transform hover:translate-y-5 hover:skew-x-2 duration-200 cursor-pointer"
             />
 
             <div className="pr-2 flex justify-end gap-2 transition duration-100 my-2">

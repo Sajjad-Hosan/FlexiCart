@@ -5,7 +5,13 @@ import { IoReaderOutline } from "react-icons/io5";
 const OurCollections = () => {
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-semibold text-left mb-6">Our Collections</h2>
+      <div className="flex flex-col text-center mb-5">
+        <h2 className="text-4xl font-semibold mb-2">Our Collections</h2>
+        <p className="font-semibold text-sm lg:w-1/2 mx-auto">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+          labore laudantium perferendis eos alias nihil.
+        </p>
+      </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
           <div className="card bg-base-200 p-8 lg:p-4 shadow">

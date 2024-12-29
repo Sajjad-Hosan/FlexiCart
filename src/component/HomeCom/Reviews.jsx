@@ -5,7 +5,7 @@ const Reviews = () => {
   return (
     <div className="flex flex-col md:flex-row gap-5 items-center p-4">
       <div className="flex flex-col gap-14 flex-grow p-10 md:w-[40%]">
-        <h1 className="text-4xl capitalize text-left">
+        <h1 className="text-3xl capitalize text-left">
           What Our client say about us,
         </h1>
         <div className="flex md:flex-col items-center gap-4 ml-auto">

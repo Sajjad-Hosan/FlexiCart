@@ -6,13 +6,13 @@ import { IoReaderOutline } from "react-icons/io5";
 const AllProducts = () => {
   const [tab, setTab] = useState(1);
   return (
-    <div className="p-4"> 
+    <div className="p-4">
       <div className="flex flex-col md:flex-row justify-between items-center mb-10">
         <div className="flex flex-col mb-5">
           <h2 className="font-semibold text-left mb-1">
             &#10040; Shop Products
           </h2>
-          <h1 className="text-2xl font-semibold">Our All Products</h1>
+          <h1 className="text-4xl font-semibold">Our All Products</h1>
         </div>
         <div role="tablist" className="tabs tabs-boxed px-4 py-4">
           {[

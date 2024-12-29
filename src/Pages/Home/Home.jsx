@@ -6,6 +6,7 @@ import OurCollections from "../../component/HomeCom/OurCollections";
 import Reviews from "../../component/HomeCom/Reviews";
 import TopCategories from "../../component/HomeCom/TopCategories";
 import TrendingProducts from "../../component/HomeCom/TrendingProducts";
+import TimeOffer from "../../component/OffersCom/TimeOffer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <AllProducts />
         <TrendingProducts />
         <Reviews />
+        <TimeOffer/>
         <OurBlogs/>
       </div>
     </div>

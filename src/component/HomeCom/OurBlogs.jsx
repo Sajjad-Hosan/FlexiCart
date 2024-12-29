@@ -1,3 +1,5 @@
+import Newsletter from "../OffersCom/Newsletter";
+
 const OurBlogs = () => {
   return (
     <div className="p-4">
@@ -5,8 +7,8 @@ const OurBlogs = () => {
         <p className="font-semibold">&#10040; Our Blogs &#10040;</p>
         <h1 className="text-4xl">Explore Our Article</h1>
       </div>
-      <div className="mt-10">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="my-14">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div className="card p-4">
             <img
               src="https://html.pixelfit.agency/pesco/assets/images/blog/blog-big-1.png"
@@ -27,7 +29,7 @@ const OurBlogs = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 px-5">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="card p-4">
                 <img
@@ -54,6 +56,7 @@ const OurBlogs = () => {
           </div>
         </div>
       </div>
+      <Newsletter/>
     </div>
   );
 };
