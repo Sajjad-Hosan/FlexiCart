@@ -21,14 +21,14 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/flexicart.git
-   cd flexicart
+   git clone https://github.com/Sajjad-Hosan/FlexiCart.git
+   cd FlexiCart
 
 2. Install dependencies:
 
 Frontend:
 ```bash
-cd frontend
+cd FlexiCart
 npm install
 ```
 Backend:
