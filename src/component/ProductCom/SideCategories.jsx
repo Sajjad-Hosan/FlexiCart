@@ -1,6 +1,4 @@
-import image from '../../assets/shop-ads.png'
-
-
+import image from "../../assets/shop-ads.png";
 
 const categories = [];
 const SideCategories = () => {
@@ -83,11 +81,12 @@ const SideCategories = () => {
         </li>
         <li>
           <h2 className="text-2xl font-semibold mb-4">Products Colors</h2>
-          <ul className="grid grid-cols-5 gap-2">
+          <ul className="grid grid-cols-5 gap-y-3">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <li key={i}>
-                <label className="bg-red-500 px-4 py-1 rounded-box cursor-pointer border border-x-black">
-                  <input type="checkbox" className="" hidden />
+                <label>
+                  <input type="radio" className="hidden peer" name="size" />
+                  <span className="bg-transparent px-4 py-1 rounded-box cursor-pointer border peer-checked:bg-neutral-content"></span>
                 </label>
               </li>
             ))}
@@ -100,7 +99,7 @@ const SideCategories = () => {
               <li key={i}>
                 <label>
                   <input type="radio" className="hidden peer" name="size" />
-                  <span className="bg-transparent px-4 py-1 rounded-box cursor-pointer border border-x-black peer-checked:bg-red-500">
+                  <span className="bg-transparent px-4 py-1 rounded-box cursor-pointer border peer-checked:bg-neutral-content">
                     {i}
                   </span>
                 </label>
@@ -111,14 +110,20 @@ const SideCategories = () => {
         <li>
           <div className="card flex-row relative bg-base-300">
             <div className="flex flex-col gap-5 p-10">
-              <span className="badge badge-neutral px-8 py-4 text-xl">Big Sale</span>
+              <span className="badge badge-neutral px-8 py-4 text-xl">
+                Big Sale
+              </span>
               <p className="flex font-semibold flex-col">
                 <h1 className="text-4xl">40% </h1>
                 off Each Products
               </p>
               <button className="btn btn-neutral px-8">Shop Now</button>
             </div>
-            <img src={image} alt="" className='w-1/2 object-contain absolute right-0 bottom-0'/>
+            <img
+              src={image}
+              alt=""
+              className="w-1/2 object-contain absolute right-0 bottom-0"
+            />
           </div>
         </li>
       </ul>

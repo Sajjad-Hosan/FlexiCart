@@ -7,8 +7,8 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const GridCard = () => {
   return (
-    <div className="card p-6 border w-full">
-      <img src={image} alt="" className="rounded-box object-contain" />
+    <div className="card p-6 border w-full transition-all duration-100">
+      <img src={image} alt="" className="rounded-box object-contain transition duration-100 hover:scale-95 hover:skew-x-2 cursor-pointer" />
       <div className="flex flex-col gap-3 mt-8">
         <div className="flex items-center justify-between">
           <div className="rating rating-sm">

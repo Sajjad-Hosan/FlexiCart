@@ -1,13 +1,17 @@
 import { BsGridFill } from "react-icons/bs";
-import PageBanner from "../../../component/PageBanner/PageBanner";
-import SideCategories from "../../../component/ProductCom/SideCategories";
+import PageBanner from "../../component/PageBanner/PageBanner";
+import SideCategories from "../../component/ProductCom/SideCategories";
 import { FaListUl } from "react-icons/fa6";
-import GridsCardsLayout from "../../../component/ProductCom/GridsCardsLayout";
+import GridsCardsLayout from "../../component/ProductCom/GridsCardsLayout";
 
 const ProductsPage = () => {
   return (
     <div className="p-5">
-      <PageBanner />
+      <PageBanner
+        heading="Product Page"
+        afterPage="Products"
+        beforePage="Home"
+      />
       <div className="flex gap-5">
         <SideCategories />
         <div className="flex flex-col gap-10 w-[80%]">
