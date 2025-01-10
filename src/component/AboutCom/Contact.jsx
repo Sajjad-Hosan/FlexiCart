@@ -1,14 +1,14 @@
 const Contact = () => {
   return (
-    <div className="card p-10">
+    <div className="card flex-col p-10">
       <p className="font-semibold text-md mb-1">Contact with us</p>
       <h1 className="text-4xl font-semibold mb-2">Get in touch</h1>
-      <p className="font-semibold text-sm w-1/2">
+      <p className="font-semibold text-sm lg:w-1/2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aut,
         quod eius fugit non ipsa libero consectetur officia illo quae?
       </p>
-      <div className="flex justify-between mt-6">
-        <form className="p-5 flex flex-col gap-4 w-[60%]">
+      <div className="flex flex-col md:flex-row justify-between mt-6">
+        <form className="p-5 flex flex-col gap-4 md:w-[60%]">
           <div className="flex items-center gap-6">
             <input
               type="text"

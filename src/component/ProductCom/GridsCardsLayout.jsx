@@ -8,7 +8,11 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 const GridCard = () => {
   return (
     <div className="card p-6 border w-full transition-all duration-100">
-      <img src={image} alt="" className="rounded-box object-contain transition duration-100 hover:scale-95 hover:skew-x-2 cursor-pointer" />
+      <img
+        src={image}
+        alt=""
+        className="rounded-box object-contain transition duration-100 hover:scale-95 hover:skew-x-2 cursor-pointer"
+      />
       <div className="flex flex-col gap-3 mt-8">
         <div className="flex items-center justify-between">
           <div className="rating rating-sm">
@@ -59,7 +63,7 @@ const GridCard = () => {
 const GridsCardsLayout = () => {
   return (
     <div>
-      <div className="grid lg:grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <GridCard key={i} />
         ))}
@@ -82,7 +86,7 @@ const GridsCardsLayout = () => {
           <button className="join-item btn btn-sm btn-outline">2</button>
           <button className="join-item btn btn-sm btn-outline">3</button>
           <button className="join-item btn btn-sm btn-outline">4</button>
-          <button className="join-item btn btn-sm btn-outline" >...</button>
+          <button className="join-item btn btn-sm btn-outline">...</button>
         </div>
       </div>
     </div>

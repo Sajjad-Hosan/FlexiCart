@@ -16,7 +16,7 @@ const TrendingProducts = () => {
         </div>
       
       </div>
-      <div className="grid lg:grid-cols-3 lg:gap-5 gap-y-40 mt-36">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-40 mt-36">
         {[1, 2, 3].map((i) => (
           <div className="card justify-end border border-dashed border-gray-600 h-[25rem] p-8 lg:p-4 shadow relative">
             <img

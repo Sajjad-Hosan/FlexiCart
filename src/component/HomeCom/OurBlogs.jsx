@@ -1,6 +1,7 @@
 import Newsletter from "../OffersCom/Newsletter";
+import PropTypes from "prop-types";
 
-const OurBlogs = () => {
+const OurBlogs = ({ hide }) => {
   return (
     <div className="p-4">
       <div className="flex flex-col text-center">
@@ -56,9 +57,13 @@ const OurBlogs = () => {
           </div>
         </div>
       </div>
-      <Newsletter/>
+      {hide && <Newsletter />}
     </div>
   );
 };
 
 export default OurBlogs;
+
+OurBlogs.prototype = {
+  hide: PropTypes.bool,
+};

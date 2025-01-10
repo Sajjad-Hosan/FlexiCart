@@ -3,7 +3,7 @@ import image from "../../assets/deal-2.png";
 
 const TodayOfferCard = () => {
   return (
-    <div className="card flex-row items-center p-5"> 
+    <div className="card flex-col lg:flex-row items-center p-5"> 
       <img src={image} alt="" className="rounded-xl z-10 transform transition-all duration-150 hover:scale-95 hover:-translate-y-5 cursor-pointer" />
       <div className="flex flex-col gap-2 border p-10 h-[16rem] rounded-xl -ml-2">
         <div className="flex items-center justify-between ">
@@ -65,7 +65,7 @@ const TodaysOffers = () => {
   return (
     <div className="mt-20 w-full flex">
       
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid md:grid-cols-2 gap-2">
           {[1, 2, 3,4].map((i) => (
             <TodayOfferCard key={i}/>
           ))}

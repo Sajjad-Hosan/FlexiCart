@@ -3,10 +3,10 @@ import image from "../../assets/newsletter-1.png";
 
 const Newsletter = () => {
   return (
-    <div className="card flex-row bg-orange-300">
-      <div className="flex flex-col gap-5 py-20 px-14">
-        <p className="font-semibold text-lg">Our Newsletter</p>
-        <h1 className="text-3xl">
+    <div className="card md:flex-row bg-orange-300">
+      <div className="flex flex-col gap-4 py-20 px-14">
+        <p className="font-semibold lg:text-lg">Our Newsletter</p>
+        <h1 className="text-xl lg:text-3xl">
           Get weekly update. Sign up and get up to{" "}
           <span className="text-orange-500">20% off</span> your first purchase
         </h1>

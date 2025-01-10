@@ -20,8 +20,8 @@ const Home = () => {
         <AllProducts />
         <TrendingProducts />
         <Reviews />
-        <TimeOffer/>
-        <OurBlogs/>
+        <TimeOffer />
+        <OurBlogs hide={true} />
       </div>
     </div>
   );

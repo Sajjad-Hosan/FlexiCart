@@ -1,5 +1,6 @@
 import Contact from "../../component/AboutCom/Contact";
 import OurOffers from "../../component/AboutCom/OurOffers";
+import TeamMems from "../../component/AboutCom/TeamMems";
 import PageBanner from "../../component/PageBanner/PageBanner";
 
 const AboutPage = () => {
@@ -8,7 +9,8 @@ const AboutPage = () => {
       <PageBanner heading="About Us" afterPage="About" beforePage="Home" />
       <OurOffers />
       <Contact />
-      {/* 2/3 new section have too added */}
+      <TeamMems />
+      {/* 1/2 new section have too added */}
     </div>
   );
 };
