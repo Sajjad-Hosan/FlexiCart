@@ -5,6 +5,7 @@ import OffersPage from "../Pages/OffersPage/OffersPage";
 import ProductsPage from "../Pages/ProductsPage/ProductsPage";
 import AboutPage from "../Pages/AboutPage/AboutPage";
 import OurBlogs from "../Pages/OurBlogs/OurBlogs";
+import CartPage from "../Pages/CartPage/CartPage";
 
 export const routes = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const routes = createBrowserRouter([
       {
         path: "/blog",
         element: <OurBlogs />,
+      },
+      {
+        path: "/carts",
+        element: <CartPage />,
       },
     ],
   },

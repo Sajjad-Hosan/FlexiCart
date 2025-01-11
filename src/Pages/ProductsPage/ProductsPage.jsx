@@ -58,7 +58,7 @@ const ProductsPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex">
+            <div className="flex items-center justify-center">
               <GridsCardsLayout />
             </div>
           </div>
