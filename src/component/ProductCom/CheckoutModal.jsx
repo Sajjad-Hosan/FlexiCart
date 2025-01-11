@@ -7,6 +7,7 @@ import { IoCheckmarkCircleOutline } from "react-icons/io5";
 const CheckoutModal = () => {
   return (
     <>
+      {/* only the cart method has added but not complete yet! also the hand and bank method not ready yet! */}
       <dialog id="checkout_modal" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
           <div className="flex justify-between items-center">

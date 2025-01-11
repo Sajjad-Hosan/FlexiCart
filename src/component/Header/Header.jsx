@@ -21,8 +21,8 @@ const headerArrays = [
     icon: <MdShoppingCartCheckout className="text-lg" />,
   },
   {
-    path: "whishlist",
-    name: "Whishlist",
+    path: "Wishlist",
+    name: "Wishlist",
     icon: <FaRegBookmark className="text-lg" />,
   },
   {

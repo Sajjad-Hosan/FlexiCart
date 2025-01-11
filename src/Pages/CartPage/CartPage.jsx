@@ -71,6 +71,9 @@ const CartPage = () => {
             <button
               className="btn btn-ghost btn-sm text-lg flex tooltip"
               data-tip="Checkout"
+              onClick={() =>
+                document.getElementById("checkout_modal").showModal()
+              }
             >
               <IoBagCheckOutline />
             </button>

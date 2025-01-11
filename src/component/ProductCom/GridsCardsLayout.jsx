@@ -38,7 +38,7 @@ const GridCard = () => {
         <div className="pr-2 flex justify-end gap-2 transition duration-100">
           <button
             className="btn btn-sm btn-circle btn-ghost flex tooltip"
-            data-tip="Whishlist"
+            data-tip="Wishlist"
           >
             <FaRegBookmark className="text-lg" />
           </button>
