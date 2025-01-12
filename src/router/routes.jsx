@@ -7,6 +7,7 @@ import AboutPage from "../Pages/AboutPage/AboutPage";
 import OurBlogs from "../Pages/OurBlogs/OurBlogs";
 import CartPage from "../Pages/CartPage/CartPage";
 import WishlistPage from "../Pages/WishlistPage/WishlistPage";
+import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 
 export const routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const routes = createBrowserRouter([
       {
         path: "/Wishlist",
         element: <WishlistPage />,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage />,
       },
     ],
   },
