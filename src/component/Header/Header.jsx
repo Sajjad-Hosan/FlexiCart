@@ -8,6 +8,7 @@ import {
 } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import CartDrawer from "../CartDrawer/CartDrawer";
+import SettingModal from "../SettingModal/SettingModal";
 
 const headerArrays = [
   {
@@ -31,7 +32,8 @@ const headerArrays = [
     icon: <CgProfile className="text-lg" />,
   },
   {
-    path: "settings",
+    fn: true,
+    func: () => document.getElementById("setting_modal").showModal(),
     name: "Settings",
     icon: <GoGear className="text-lg" />,
   },
@@ -40,7 +42,8 @@ const productCategories = ["electronics", "clothing", "books", "toys"];
 
 const Header = () => {
   return (
-    <> 
+    <>
+      <SettingModal />
       <div className="navbar bg-base-100 mb-6">
         <div className="flex-1 flex gap-5">
           <a className="btn btn-ghost text-xl">Fl3xiC4rt</a>
@@ -113,14 +116,23 @@ const Header = () => {
                 tabIndex={0}
                 className="menu menu-sm gap-1 dropdown-content bg-base-100 rounded-box z-20 mt-3 w-52 p-2 shadow"
               >
-                {headerArrays.map(({ path, name, icon }, i) => (
-                  <li key={i}>
-                    <NavLink className="flex gap-2" to={path}>
-                      {icon}
-                      {name}
-                    </NavLink>
-                  </li>
-                ))}
+                {headerArrays.map(({ path, name, icon, fn, func }, i) =>
+                  fn ? (
+                    <li key={i}>
+                      <button className="flex gap-2" onClick={() => func()}>
+                        {icon}
+                        {name}
+                      </button>
+                    </li>
+                  ) : (
+                    <li key={i}>
+                      <NavLink className="flex gap-2" to={path}>
+                        {icon}
+                        {name}
+                      </NavLink>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
