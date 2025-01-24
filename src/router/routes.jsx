@@ -8,6 +8,8 @@ import OurBlogs from "../Pages/OurBlogs/OurBlogs";
 import CartPage from "../Pages/CartPage/CartPage";
 import WishlistPage from "../Pages/WishlistPage/WishlistPage";
 import ProfilePage from "../Pages/ProfilePage/ProfilePage";
+import Dashboard from "../Dashboard/Dashboard";
+import Overview from "../Dashboard/DashboardsPages/Overview/Overview";
 
 export const routes = createBrowserRouter([
   {
@@ -45,6 +47,16 @@ export const routes = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "overview",
+        element: <Overview />,
       },
     ],
   },
