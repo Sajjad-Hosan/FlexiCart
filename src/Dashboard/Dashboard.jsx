@@ -21,15 +21,16 @@ const dashboardArrays = [
     icon: <MdGridView className="text-xl" />,
   },
   {
-    path: "/dashboard/products-management",
-    name: "Product Management",
-    icon: <TbShoppingCartCopy className="text-xl" />,
-  },
-  {
     path: "/dashboard/order-management",
     name: "Order Management",
     icon: <GoListOrdered className="text-xl" />,
   },
+  {
+    path: "/dashboard/products-management",
+    name: "Product Management",
+    icon: <TbShoppingCartCopy className="text-xl" />,
+  },
+
   {
     path: "/dashboard/customer-management",
     name: "Customer Management",
@@ -84,8 +85,8 @@ const menuArrays = [
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <div className="flex flex-col lg:flex-row h-full overflow-hidden">
-      <div className="flex items-center justify-between px-6 py-2">
+    <div className="flex flex-col lg:flex-row h-screen">
+      <div className="flex lg:hidden items-center justify-between px-6 py-2">
         <div className="drawer z-10">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col justify-center items-start">
@@ -112,7 +113,7 @@ const Dashboard = () => {
                 {dashboardArrays.map(({ path, icon, name }, i) => (
                   <li key={i}>
                     <NavLink to={path}>
-                      {icon} {isOpen ? name : ""}
+                      {icon} {name}
                     </NavLink>
                   </li>
                 ))}
@@ -122,7 +123,7 @@ const Dashboard = () => {
                 {menuArrays.map(({ path, icon, name }, i) => (
                   <li key={i}>
                     <NavLink to={path}>
-                      {icon} {isOpen ? name : ""}
+                      {icon} {name}
                     </NavLink>
                   </li>
                 ))}
@@ -149,7 +150,7 @@ const Dashboard = () => {
         } bg-base-300 lg:flex  flex-col gap-2 overflow-hidden transition-all duration-200 fixed`}
       >
         <div
-          className="mb-1 btn transition-all duration-200"
+          className="mb-1 btn btn-ghost transition-all duration-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (

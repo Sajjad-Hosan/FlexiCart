@@ -10,6 +10,7 @@ import WishlistPage from "../Pages/WishlistPage/WishlistPage";
 import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 import Dashboard from "../Dashboard/Dashboard";
 import Overview from "../Dashboard/DashboardsPages/Overview/Overview";
+import OrderManagements from "../Dashboard/DashboardsPages/OrderManagements/OrderManagements";
 
 export const routes = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ export const routes = createBrowserRouter([
       {
         path: "overview",
         element: <Overview />,
+      },
+      {
+        path: "order-management",
+        element: <OrderManagements />,
       },
     ],
   },

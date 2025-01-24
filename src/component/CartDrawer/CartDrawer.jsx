@@ -1,5 +1,6 @@
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MdShoppingCartCheckout } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CartCard = ({ data }) => {
   return (
@@ -50,7 +51,12 @@ const CartDrawer = () => {
             className="drawer-overlay"
           ></label>
           <div className="flex flex-col justify-between bg-base-200 h-full w-[22rem] lg:w-[26rem] p-4">
-            <p className="font-semibold pb-3">Your Products</p>
+            <div className="flex items-center justify-between px-6 pb-5">
+              <p className="font-semibold pb-3">Your Products</p>
+              <Link to={"/carts"} className="btn btn-sm btn-neutral px-8">
+                <MdShoppingCartCheckout className="text-lg" /> Go to page
+              </Link>
+            </div>
             <div className="overflow-y-scroll">
               <div className="mt-5 grid gap-3 p-2 overflow-hidden">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(

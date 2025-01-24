@@ -12,7 +12,7 @@ import SettingModal from "../SettingModal/SettingModal";
 
 const headerArrays = [
   {
-    path: "dashboard",
+    path: "dashboard/overview",
     name: "Dashboard",
     icon: <MdOutlineDashboardCustomize className="text-lg" />,
   },
