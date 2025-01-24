@@ -84,11 +84,69 @@ const menuArrays = [
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <div className="flex h-full overflow-hidden">
+    <div className="flex flex-col lg:flex-row h-full overflow-hidden">
+      <div className="flex items-center justify-between px-6 py-2">
+        <div className="drawer z-10">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col justify-center items-start">
+            <label
+              htmlFor="my-drawer-2"
+              className="btn btn-ghost drawer-button lg:hidden"
+            >
+              <MdOutlineDashboardCustomize className="text-xl" />
+            </label>
+          </div>
+          <div className="drawer-side">
+            <label
+              htmlFor="my-drawer-2"
+              aria-label="close sidebar"
+              className="drawer-overlay"
+            ></label>
+            <div className="menu bg-base-300 text-base-content min-h-full w-80 p-4">
+              <div className="mb-5 flex items-center gap-2 py-2">
+                <MdOutlineDashboardCustomize className="text-3xl" />
+                <p className="text-xl font-semibold">Dashboard</p>
+              </div>
+
+              <ul className="menu rounded-box w-56 gap-2 transition-all duration-200">
+                {dashboardArrays.map(({ path, icon, name }, i) => (
+                  <li key={i}>
+                    <NavLink to={path}>
+                      {icon} {isOpen ? name : ""}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+              <div className="mx-auto w-full bg-gray-500 h-[1px]"></div>
+              <ul className="menu w-56 gap-2 transition-all duration-200">
+                {menuArrays.map(({ path, icon, name }, i) => (
+                  <li key={i}>
+                    <NavLink to={path}>
+                      {icon} {isOpen ? name : ""}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <button
+            className="btn btn-sm btn-ghost flex tooltip tooltip-bottom"
+            data-tip="Home"
+          >
+            <GoHome className="text-xl" />
+          </button>
+          <div
+            className="avatar w-10 h-10 border border-dashed border-gray-500 rounded-full transition-all duration-100 hover:scale-95 tooltip tooltip-bottom"
+            data-tip="Sajjad"
+          ></div>
+        </div>
+      </div>
       <div
-        className={`${
+        className={`hidden ${
           isOpen ? "w-[19%] justify-center items-center  p-4" : "w-[6%] p-3"
-        } bg-base-300 flex  flex-col gap-2 overflow-hidden transition-all duration-200 fixed`}
+        } bg-base-300 lg:flex  flex-col gap-2 overflow-hidden transition-all duration-200 fixed`}
       >
         <div
           className="mb-1 btn transition-all duration-200"
@@ -140,8 +198,8 @@ const Dashboard = () => {
         )}
       </div>
       <div
-        className={`${
-          isOpen ? "w-[81%]" : "w-[94%]"
+        className={`w-full ${
+          isOpen ? "lg:w-[81%]" : "lg:w-[94%]"
         } p-8 border transition-all duration-200 overflow-scroll ml-auto`}
       >
         <Outlet />
