@@ -1,10 +1,11 @@
+import { HiCheckCircle, HiXMark } from "react-icons/hi2";
 import { LuImagePlus } from "react-icons/lu";
 
 const NewProduct = () => {
   return (
     <div className="">
       <h1 className="text-2xl">New Product</h1>
-      <div className="mt-14 flex gap-4">
+      <div className="mt-14 flex flex-col md:flex-row gap-4">
         <div className="w-full bg-base-100 border p-8 card">
           <form className="flex flex-col gap-2">
             <p className="mb-4 font-semibold text-lg">Basic Information</p>
@@ -22,7 +23,7 @@ const NewProduct = () => {
             ></textarea>
           </form>
         </div>
-        <div className="w-3/4 bg-base-100 border p-8 card">
+        <div className="md:w-3/4 bg-base-100 border p-8 card">
           <p className="mb-4 font-semibold text-lg">Product Image</p>
           <div className="card border border-dashed justify-center items-center gap-2 p-10">
             <LuImagePlus className="text-4xl" />
@@ -32,7 +33,7 @@ const NewProduct = () => {
           </div>
         </div>
       </div>
-      <div className="mt-5 flex gap-4">
+      <div className="mt-5 flex flex flex-col md:flex-row gap-4">
         <div className="w-full bg-base-100 border p-8 card">
           <form className="flex flex-col gap-2">
             <p className="mb-4 font-semibold text-lg">Stock & Pricing</p>
@@ -66,7 +67,7 @@ const NewProduct = () => {
             </div>
           </form>
         </div>
-        <div className="w-3/4 bg-base-100 border p-8 card">
+        <div className="md:w-3/4 bg-base-100 border p-8 card">
           <p className="mb-4 font-semibold text-lg">Visibility</p>
           <div className="flex flex-col">
             <div className="form-control">
@@ -111,6 +112,16 @@ const NewProduct = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-end mt-5">
+        <button className="btn btn-outline px-8">
+          <HiCheckCircle className="text-lg" />
+          Save & Continue
+        </button>
+        <button className="btn btn-neutral px-8 ml-4">
+          <HiXMark className="text-lg" />
+          Cancel
+        </button>
       </div>
     </div>
   );

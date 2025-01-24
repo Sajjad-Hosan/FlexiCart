@@ -3,6 +3,7 @@ import { BsChatSquareDots, BsDownload } from "react-icons/bs";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit3 } from "react-icons/fi";
 import { HiDotsVertical } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Dropdown = ({ name, array }) => {
   return (
@@ -77,7 +78,7 @@ const OrderManagements = () => {
         <div className="flex items-center gap-3">
           <button className="btn btn-sm">Refresh</button>
           <button className="btn btn-sm">Export</button>
-          <button className="btn btn-sm">New Product</button>
+          <Link to={'/dashboard/products-management/new-product'} className="btn btn-sm">New Product</Link>
         </div>
       </div>
       <div className="flex items-center justify-between mt-5 bg-base-200 px-5 py-3 rounded-lg">
