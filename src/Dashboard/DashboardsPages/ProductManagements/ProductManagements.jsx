@@ -1,8 +1,6 @@
-import React from "react";
-import { BsChatSquareDots, BsDownload } from "react-icons/bs";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit3 } from "react-icons/fi";
-import { HiDotsVertical } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Dropdown = ({ name, array }) => {
   return (
@@ -21,38 +19,6 @@ const Dropdown = ({ name, array }) => {
   );
 };
 
-const Actions = () => {
-  return (
-    <>
-      <div className="dropdown dropdown-left">
-        <div tabIndex={0} role="button" className="btn btn-xs btn-ghost m-1">
-          <HiDotsVertical />
-        </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu bg-base-200 rounded-box z-10 w-40 p-2 shadow"
-        >
-          <li>
-            <a>
-              <BsDownload /> Download
-            </a>
-          </li>
-          <li>
-            <a>
-              <FiEdit3 /> Edit Order
-            </a>
-          </li>
-          <li>
-            <a>
-              <FaRegTrashCan /> Delete
-            </a>
-          </li>
-        </ul>
-      </div>
-    </>
-  );
-};
-
 const SortArrays = [
   { label: "Newest", value: "newest" },
   { label: "Oldest", value: "oldest" },
@@ -67,17 +33,18 @@ const filterArrays = [
   { label: "Books", value: "books" },
   { label: "Toys", value: "toys" },
 ];
-const OrderManagements = () => {
-  const success = " bg-green-200 text-green-500 ";
-  const error = "bg-red-200 text-red-500";
+const ProductManagements = () => {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Order Management</h1>
+        <h1 className="text-2xl font-semibold">Products Management</h1>
         <div className="flex items-center gap-3">
           <button className="btn btn-sm">Refresh</button>
           <button className="btn btn-sm">Export</button>
-          <button className="btn btn-sm">New Product</button>
+          <Link to={"new-product"} className="btn btn-sm">
+            New Product
+          </Link>
+          <button className="btn btn-sm">Import CSV</button>
         </div>
       </div>
       <div className="flex items-center justify-between mt-5 bg-base-200 px-5 py-3 rounded-lg">
@@ -101,51 +68,67 @@ const OrderManagements = () => {
           <Dropdown name="Filter by" array={filterArrays} />
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-6">
         <div className="overflow-x-auto">
           <table className="table table-xs">
+            {/* head */}
             <thead>
-              <tr className="font-semibold">
+              <tr>
                 <th>#</th>
-                <th>Order ID</th>
-                <th>Date</th>
-                <th>Items</th>
+                <th>
+                  <label>
+                    <input type="checkbox" className="checkbox checkbox-sm" />
+                  </label>
+                </th>
+                <th></th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Stock</th>
                 <th>Price</th>
-                <th>Paid</th>
-                <th>Address</th>
-                <th>Status</th>
+                <th></th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
+              {/* row 1 */}
               {[...Array(10).keys()].map((i) => (
                 <tr key={i}>
                   <th>{i}</th>
-                  <td>658545</td>
-                  <td>12 jun, 2024</td>
-                  <td>10</td>
-                  <td>$142595</td>
+                  <th>
+                    <label>
+                      <input type="checkbox" className="checkbox checkbox-sm" />
+                    </label>
+                  </th>
+                  <td></td>
                   <td>
-                    <span
-                      className={`border border-dashed px-4 py-[1px] rounded-full font-semibold ${success}`}
-                    >
-                      Yes
-                    </span>
+                    <div className="flex items-center gap-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle h-9 w-9">
+                          <img
+                            src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-md">
+                          Hart Hagerty
+                        </div>
+                      </div>
+                    </div>
                   </td>
-                  <td>Nilphmari,Rangpur,BD</td>
-                  <td>
-                    <span
-                      className={`border border-dashed px-4 py-[1px] rounded-full font-semibold ${success}`}
-                    >
-                      Compleate
-                    </span>
-                  </td>
-                  <td className="flex items-center">
-                    <Actions />
-                    <button className="btn btn-xs btn-ghost">
-                      <BsChatSquareDots />
+                  <td>Shop</td>
+                  <td>{i * 4 - 2}</td>
+                  <td>$415</td>
+                  <td></td>
+                  <th>
+                    <button className="btn btn-ghost btn-xs">
+                      <FaRegTrashCan />
                     </button>
-                  </td>
+                    <button className="btn btn-ghost btn-xs">
+                      <FiEdit3 />
+                    </button>
+                  </th>
                 </tr>
               ))}
             </tbody>
@@ -171,4 +154,4 @@ const OrderManagements = () => {
   );
 };
 
-export default OrderManagements;
+export default ProductManagements;

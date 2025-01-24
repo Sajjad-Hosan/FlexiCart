@@ -11,6 +11,8 @@ import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 import Dashboard from "../Dashboard/Dashboard";
 import Overview from "../Dashboard/DashboardsPages/Overview/Overview";
 import OrderManagements from "../Dashboard/DashboardsPages/OrderManagements/OrderManagements";
+import ProductManagements from "../Dashboard/DashboardsPages/ProductManagements/ProductManagements";
+import NewProduct from "../Dashboard/DashboardsPages/ProductManagements/NewProduct/NewProduct";
 
 export const routes = createBrowserRouter([
   {
@@ -62,6 +64,14 @@ export const routes = createBrowserRouter([
       {
         path: "order-management",
         element: <OrderManagements />,
+      },
+      {
+        path: "products-management",
+        element: <ProductManagements />,
+      },
+      {
+        path: "products-management/new-product",
+        element: <NewProduct />,
       },
     ],
   },
