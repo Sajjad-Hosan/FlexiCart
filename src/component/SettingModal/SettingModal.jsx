@@ -21,7 +21,7 @@ const SettingModal = () => {
               <li className="grid grid-cols-2 gap-10">
                 <div className="flex flex-col gap-2">
                   <p className="font-semibold">Lights</p>
-                  <li className="grid grid-cols-4 gap-5">
+                  <li className="grid grid-cols-2 gap-5">
                     {[...Array(4).keys()].map((i) => (
                       <button className="btn btn-outline">Theme</button>
                     ))}
@@ -29,7 +29,7 @@ const SettingModal = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="font-semibold">Darks</p>
-                  <li className="grid grid-cols-4 gap-5">
+                  <li className="grid grid-cols-2 gap-5">
                     {[...Array(4).keys()].map((i) => (
                       <button className="btn btn-outline">Theme</button>
                     ))}
@@ -50,11 +50,6 @@ const SettingModal = () => {
                   <button className="btn btn-outline">Only Popup</button>
                 </div>
               </li>
-              <div className="flex justify-end">
-                <span className="card px-8 py-3 font-semibold mt-10 text-xl text-right border border-dashed border-gray-400">
-                  Coming Soon new methods
-                </span>
-              </div>
             </ul>
           </div>
         </div>
