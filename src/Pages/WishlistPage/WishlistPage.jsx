@@ -2,7 +2,7 @@ import PageBanner from "../../component/PageBanner/PageBanner";
 import image from "../../assets/product-1.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
-const WishlistCard = () => {
+const WishlistCard = ({ i }) => {
   return (
     <>
       <li className="card relative flex-col lg:flex-row gap-9 items-end lg:justify-around border border-dashed border-gray-600 p-5">
@@ -13,7 +13,7 @@ const WishlistCard = () => {
         </div>
         <div className="flex gap-2">
           <img
-            src={image}
+            src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i}-2.jpg`}
             alt=""
             className="object-contain w-[35%] rounded-xl"
           />
@@ -58,7 +58,7 @@ const WishlistPage = () => {
         <div>
           <ul className="flex flex-col gap-5">
             {[...Array(8).keys()].map((i) => (
-              <WishlistCard key={i} />
+              <WishlistCard key={i} i={i} />
             ))}
           </ul>
         </div>

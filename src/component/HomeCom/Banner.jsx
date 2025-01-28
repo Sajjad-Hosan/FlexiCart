@@ -25,10 +25,13 @@ export default function Banner() {
         modules={[Mousewheel, Pagination]}
         className="mySwiper"
       >
-        {[1, 2, 3, 4, 5].map((i) => (
+        {[1, 2, 3, 4].map((i) => (
           <SwiperSlide key={i}>
-            <img src={`https://swiperjs.com/demos/images/nature-${i}.jpg`} />
-            <div className="absolute bottom-20 left-5 lg:left-14 lg:w-1/2 text-black text-left p-4">
+            <img
+              src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/slider/slider-${i+1}.png`}
+              className="object-contain"
+            />
+            <div className="absolute bottom-16 right-5 lg:right-14 lg:w-1/2 text-black text-left p-4">
               <h1 className="lg:text-4xl font-semibold">Product Heading</h1>
               <p className="text-sm lg:text-md font-semibold mt-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

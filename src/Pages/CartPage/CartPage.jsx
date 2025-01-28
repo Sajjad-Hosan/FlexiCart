@@ -9,7 +9,7 @@ import CouponModal from "../../component/ProductCom/CouponModal";
 import BillsModal from "../../component/ProductCom/BillsModal";
 import CheckoutModal from "../../component/ProductCom/CheckoutModal";
 
-const CartCard = () => {
+const CartCard = ({ i }) => {
   const [products, setProducts] = useState(1);
   return (
     <>
@@ -34,7 +34,7 @@ const CartCard = () => {
           Products {products < 10 ? "0" + products : products}
         </span>
         <img
-          src={image}
+          src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i}-2.jpg`}
           alt=""
           className="card object-contain w-full transition duration-150 transform hover:scale-95 cursor-pointer"
         />
@@ -118,7 +118,7 @@ const CartPage = () => {
           <div className="mt-6 p-5">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
               {[...Array(10).keys()].map((i) => (
-                <CartCard key={i} />
+                <CartCard key={i} i={i} />
               ))}
             </div>
             <div className="flex justify-end items-center gap-5 mt-10">

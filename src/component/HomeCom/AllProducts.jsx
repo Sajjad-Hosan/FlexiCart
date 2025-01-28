@@ -44,7 +44,7 @@ const AllProducts = () => {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
           <div className="card bg-base-200 p-8 lg:p-4 shadow">
             <img
-              src="https://html.pixelfit.agency/pesco/assets/images/products/feature-product-2.png"
+              src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i}-2.jpg`}
               alt=""
               className="p-2 rounded-box"
             />

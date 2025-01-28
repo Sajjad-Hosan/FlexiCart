@@ -5,11 +5,11 @@ import { FaRegBookmark } from "react-icons/fa6";
 import { Grid } from "swiper/modules";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
-const GridCard = () => {
+const GridCard = ({ i }) => {
   return (
     <div className="card p-6 border w-full transition-all duration-100">
       <img
-        src={image}
+        src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i}-2.jpg`}
         alt=""
         className="rounded-box object-contain transition duration-100 hover:scale-95 hover:skew-x-2 cursor-pointer"
       />
@@ -65,7 +65,7 @@ const GridsCardsLayout = () => {
     <div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[1, 2, 3, 4, 5, 6].map((i) => (
-          <GridCard key={i} />
+          <GridCard key={i} i={i} />
         ))}
       </div>
       <div className="flex justify-end mt-10 gap-2">

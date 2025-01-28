@@ -37,7 +37,7 @@ const OfferCard = ({ image }) => {
           Shop Now
         </button>
       </div>
-      <img src={image} alt="" className="w-1/2 object-contain mt-auto"/>
+      <img src={image} alt="" className="w-1/2 object-contain mt-auto" />
     </div>
   );
 };
@@ -53,7 +53,7 @@ const TopCategories = () => {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
             <div className="card w-[15rem]  overflow-hidden" key={i}>
               <img
-                src="https://html.pixelfit.agency/pesco/assets/images/hero/hero-two_img1.jpg"
+                src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i}-2.jpg`}
                 alt=""
                 className="w-full object-cover rounded-full"
               />

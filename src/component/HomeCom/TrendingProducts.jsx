@@ -20,7 +20,7 @@ const TrendingProducts = () => {
         {[1, 2, 3].map((i) => (
           <div className="card justify-end border border-dashed border-gray-600 h-[25rem] p-8 lg:p-4 shadow relative">
             <img
-              src="https://html.pixelfit.agency/pesco/assets/images/products/feature-product-2.png"
+               src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i+5}-2.jpg`}
               alt=""
               className="p-2 rounded-box absolute -top-36 left-28 lg:left-14 h-[22rem] transition-all transform hover:translate-y-5 hover:skew-x-2 duration-200 cursor-pointer"
             />
