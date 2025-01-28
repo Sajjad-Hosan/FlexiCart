@@ -65,7 +65,6 @@ const dashboardArrays = [
 const menuArrays = [
   {
     path: "/",
-
     name: "Home",
     icon: <GoHome className="text-xl" />,
   },

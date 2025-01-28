@@ -72,14 +72,16 @@ const CustomerManagement = () => {
     <>
       <ViewModal />
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Customers Management</h1>
+        <h1 className="text-lg md:text-2xl font-semibold">
+          Customers Management
+        </h1>
         <div className="flex items-center gap-2">
           <button className="btn btn-sm btn-neutral">New Customer</button>
           <button className="btn btn-sm btn-outline">Export</button>
         </div>
       </div>
 
-      <div className="flex gap-10 mt-8">
+      <div className="flex flex-col md:flex-row gap-10 mt-8">
         {[...Array(3).keys()].map((i) => (
           <div className="card p-5 border border-dashed border-gray-500 w-full">
             <div className="flex justify-between items-center">
@@ -98,7 +100,7 @@ const CustomerManagement = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between mt-5 bg-base-200 px-5 py-3 rounded-lg">
+      <div className="flex items-center gap-8 justify-between mt-5 bg-base-200 px-5 py-3 rounded-lg">
         <label className="input input-sm input-bordered flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"

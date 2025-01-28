@@ -14,6 +14,7 @@ import OrderManagements from "../Dashboard/DashboardsPages/OrderManagements/Orde
 import ProductManagements from "../Dashboard/DashboardsPages/ProductManagements/ProductManagements";
 import NewProduct from "../Dashboard/DashboardsPages/ProductManagements/NewProduct/NewProduct";
 import CustomerManagement from "../Dashboard/DashboardsPages/CustomerManagement/CustomerManagement";
+import Sales_Reports from "../Dashboard/DashboardsPages/Sales_Reports/Sales_Reports";
 
 export const routes = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const routes = createBrowserRouter([
       {
         path: "customer-management",
         element: <CustomerManagement />,
+      },
+      {
+        path: "sales-reports",
+        element: <Sales_Reports />,
       },
     ],
   },
