@@ -18,6 +18,7 @@ import Sales_Reports from "../Dashboard/DashboardsPages/Sales_Reports/Sales_Repo
 import PaymentManagement from "../Dashboard/DashboardsPages/PaymentManagement/PaymentManagement";
 import ShippingManagement from "../Dashboard/DashboardsPages/ShippingManagement/ShippingManagement";
 import MarketingTools from "../Dashboard/DashboardsPages/MarketingTools/MarketingTools";
+import Notifications from "../Dashboard/DashboardsPages/Notifications/Notifications";
 
 export const routes = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ export const routes = createBrowserRouter([
       {
         path: "marketing-tools",
         element: <MarketingTools />,
+      },
+      {
+        path: "notifications",
+        element: <Notifications />,
       },
     ],
   },
