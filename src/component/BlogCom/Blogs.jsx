@@ -1,10 +1,14 @@
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import image from "../../assets/blog-sm-5.png";
+import { Link } from "react-router-dom";
 
 const BlogCard = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row p-7 border-y border-dashed w-full justify-between items-center">
+      <Link
+        className="flex flex-col md:flex-row p-7 border-y border-dashed w-full justify-between items-center transition-all duration-100 hover:scale-95 cursor-pointer"
+        to={`/blog-view/${0}`}
+      >
         <img src={image} alt="" className="card object-contain" />
         <div className="p-8 flex flex-col gap-3">
           <h1 className="text-3xl font-semibold">
@@ -22,7 +26,7 @@ const BlogCard = () => {
             <p className="text-sm font-semibold">March 12, 2024</p>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

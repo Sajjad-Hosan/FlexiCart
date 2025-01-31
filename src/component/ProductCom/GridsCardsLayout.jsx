@@ -4,6 +4,7 @@ import { BsCartPlus } from "react-icons/bs";
 import { FaRegBookmark } from "react-icons/fa6";
 import { Grid } from "swiper/modules";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const GridCard = ({ i }) => {
   return (
@@ -48,12 +49,13 @@ const GridCard = ({ i }) => {
           >
             <BsCartPlus className="text-lg" />
           </button>
-          <button
+          <Link
+            to={`/product-view/${0}`}
             className="btn btn-sm btn-circle btn-ghost flex tooltip"
             data-tip="View"
           >
             <IoReaderOutline className="text-lg" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
