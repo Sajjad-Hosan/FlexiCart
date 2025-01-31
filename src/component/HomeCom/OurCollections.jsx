@@ -1,6 +1,7 @@
 import { BsCartPlus } from "react-icons/bs";
 import { FaRegBookmark } from "react-icons/fa6";
 import { IoReaderOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const OurCollections = () => {
   return (
@@ -34,12 +35,13 @@ const OurCollections = () => {
               >
                 <BsCartPlus className="text-lg" />
               </button>
-              <button
+              <Link
+                to={`/product-view/${0}`}
                 className="btn btn-sm btn-circle btn-ghost flex tooltip"
                 data-tip="View"
               >
                 <IoReaderOutline className="text-lg" />
-              </button>
+              </Link>
             </div>
             <div className="flex flex-col gap-2 p-2 mt-3">
               <div className="flex justify-between items-center">

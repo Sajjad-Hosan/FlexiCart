@@ -9,7 +9,9 @@ import {
 import { NavLink } from "react-router-dom";
 import CartDrawer from "../CartDrawer/CartDrawer";
 import SettingModal from "../SettingModal/SettingModal";
-import image from "../../../public/logo.png";
+import image from '../../../public/logo.png'
+
+
 
 const headerArrays = [
   {
@@ -47,7 +49,7 @@ const Header = () => {
       <SettingModal />
       <div className="navbar bg-base-100 mb-6">
         <div className="flex-1 flex gap-5">
-          <img src={image} className="object-contain" alt="" width={160}/>
+          <a className="btn btn-ghost text-xl">Fl3xiC4rt</a>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">

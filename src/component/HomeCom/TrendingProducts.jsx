@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BsCartPlus } from "react-icons/bs";
 import { FaRegBookmark } from "react-icons/fa6";
 import { IoReaderOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const TrendingProducts = () => {
   const [tab, setTab] = useState(1);
@@ -14,13 +15,14 @@ const TrendingProducts = () => {
           </h2>
           <h1 className="text-4xl font-semibold">What's Trending Now</h1>
         </div>
-      
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-40 mt-36">
         {[1, 2, 3].map((i) => (
           <div className="card justify-end border border-dashed border-gray-600 h-[25rem] p-8 lg:p-4 shadow relative">
             <img
-               src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${i+5}-2.jpg`}
+              src={`https://wp.alithemes.com/html/evara/evara-frontend/assets/imgs/shop/product-${
+                i + 5
+              }-2.jpg`}
               alt=""
               className="p-2 rounded-box absolute -top-36 left-28 lg:left-14 h-[22rem] transition-all transform hover:translate-y-5 hover:skew-x-2 duration-200 cursor-pointer"
             />
@@ -38,12 +40,13 @@ const TrendingProducts = () => {
               >
                 <BsCartPlus className="text-lg" />
               </button>
-              <button
+              <Link
+                to={`/product-view/${0}`}
                 className="btn btn-sm btn-circle btn-ghost flex tooltip"
                 data-tip="View"
               >
                 <IoReaderOutline className="text-lg" />
-              </button>
+              </Link>
             </div>
             <div className="flex gap-2 p-3 mt-3">
               <div className="flex flex-col justify-between items-start">

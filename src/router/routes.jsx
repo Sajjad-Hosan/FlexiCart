@@ -19,6 +19,7 @@ import PaymentManagement from "../Dashboard/DashboardsPages/PaymentManagement/Pa
 import ShippingManagement from "../Dashboard/DashboardsPages/ShippingManagement/ShippingManagement";
 import MarketingTools from "../Dashboard/DashboardsPages/MarketingTools/MarketingTools";
 import Notifications from "../Dashboard/DashboardsPages/Notifications/Notifications";
+import ProductView from "../Pages/ProductView/ProductView";
 
 export const routes = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ export const routes = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+      {
+        path: "/product-view/:id",
+        element: <ProductView />,
       },
     ],
   },
