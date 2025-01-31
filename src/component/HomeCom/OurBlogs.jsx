@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Newsletter from "../OffersCom/Newsletter";
 import PropTypes from "prop-types";
 
@@ -10,7 +11,10 @@ const OurBlogs = ({ hide }) => {
       </div>
       <div className="my-14">
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="card p-4 cursor-pointer transition-all duration-150 hover:scale-95">
+          <Link
+            to={`/blog-view/${0}`}
+            className="card p-4 cursor-pointer transition-all duration-150 hover:scale-95"
+          >
             <img
               src="https://html.pixelfit.agency/pesco/assets/images/blog/blog-big-1.png"
               alt=""
@@ -29,10 +33,11 @@ const OurBlogs = ({ hide }) => {
                 converts clicks into clothes hanging in closets
               </p>
             </div>
-          </div>
+          </Link>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 px-5">
             {[1, 2, 3, 4].map((i) => (
-              <div
+              <Link
+                to={`/blog-view/${0}`}
                 key={i}
                 className="card p-4 cursor-pointer transition-all duration-150 hover:scale-95"
               >
@@ -55,7 +60,7 @@ const OurBlogs = ({ hide }) => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

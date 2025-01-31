@@ -20,6 +20,7 @@ import ShippingManagement from "../Dashboard/DashboardsPages/ShippingManagement/
 import MarketingTools from "../Dashboard/DashboardsPages/MarketingTools/MarketingTools";
 import Notifications from "../Dashboard/DashboardsPages/Notifications/Notifications";
 import ProductView from "../Pages/ProductView/ProductView";
+import BlogView from "../Pages/BlogView/BlogView";
 
 export const routes = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ export const routes = createBrowserRouter([
       {
         path: "/product-view/:id",
         element: <ProductView />,
+      },
+      {
+        path: "/blog-view/:id",
+        element: <BlogView />,
       },
     ],
   },
